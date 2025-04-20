@@ -1,0 +1,274 @@
+.images-text{
+    margin-top: 128px;
+}
+
+.images-text h1{
+    margin-bottom: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 64px;
+}
+
+.images-text p{
+    text-align: center;
+    margin-bottom: 64px;
+    font-weight: lighter;
+    width: 35%;
+}
+
+.images-text .sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagelist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    width: auto;
+}
+
+.imageslist li img{
+    align-content: center;
+}
+
+.featured{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width: 1500px){
+    .featured {
+        flex-direction: column;
+    }
+
+    .image-group{
+        margin-bottom: 64px;
+        align-content: center;
+    }
+}
+
+@media (max-width: 450px){
+    .featured li img{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 1000px){
+    .content2{
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1000px){    
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav:not(.responsive) ul li:not(:last-child){
+        display: none;
+    }
+
+    nav ul li a.icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 25px;
+        font-size: larger;
+    }
+
+    nav.responsive{
+        display: block;
+    }
+
+}
+
+.image-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-group img{
+    width: 468px;
+    height: 355px;
+    border-radius: 8px;
+}
+
+.image-group h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.image-group button{
+    background-color: #db5938;
+    border-radius: 50px;
+    width: 100px;
+    padding: 4px;
+}
+
+.image-group button a{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.image-group .buttoncenter{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content2{
+    margin-top: 256px;
+    margin-bottom: 256px;
+    margin-left: 64px;
+}
+
+.all-blogs-title{
+    margin-left: 64px;
+}
+
+.content2 h1{
+    margin-bottom: 64px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 64px;    
+}
+
+.content2 .catlist{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.content2 ul{
+    list-style: none;
+    margin-left: 64px;
+}
+
+.content2 img{
+    width: 468px;
+    height: 355px;
+    border-radius: 8px;
+}
+
+.content2 .content-group{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+@media ( max-width: 1000px ) {
+    .content2 .content-group{
+        flex-direction: column;
+    }
+
+    .content2 .blogdesc{
+        margin-left: 0px;
+    }
+
+    .content2{
+        margin-left: 0;
+    }
+
+    .content2 img{
+        width: 70%;
+        height: 70%;
+    }
+
+    .catlist{
+        padding: 0;
+    }
+
+    .imagelist{
+        padding: 0px;
+    }
+}
+
+.blogdesc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 48px;
+    gap: 16px;
+    max-width: 800px;
+    width: auto;
+}
+
+.blogdesc .content-body{
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+.blogdesc h2{
+    font-size: 40px;
+    color: #db5938;
+}
+
+.blogdesc .author{
+    font-size: 16px;
+    opacity: 70%;
+}
+
+.blogdesc button{
+    background-color: #db5938;
+    border-radius: 50px;
+    width: 100px;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.sample{
+    color: #db5938;
+}
+
+button{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #a14521;
+}
+
+button:active {
+    background: #a14521;
+    box-shadow: 0 1px #351509;
+    transform: translateY(2px);
+}
+
+.single{
+    text-decoration: none;
+}
+
+.images-text .empty{
+    font-weight: normal;
+}
+.empty2{
+    margin-left: 128px;
+}
+
+.time{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(170, 170, 170);
+}

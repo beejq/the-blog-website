@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head Partial -->
+    <%- include('../partials/head.ejs') %>
+
+<body>
+
+    <!-- Navigation Partial -->
+    <%- include('../partials/nav.ejs') %>
+    
+    <div class="images-text">
+        <h1>Welcome to the <span class="sample">blog</span> website</h1>
+        <div class="sub">
+            <p>Find random blogs to read, interesting, fictional, lorem et ipsum random text here...</p>
+        </div>
+
+        <div class="featured">
+        <% if (blogs.length > 0) { %>
+            <% for( let i = 0; i < Math.min(blogs.length, 3); i++ ) { %>
+
+                    <ul class ="imagelist">
+                        <div class="image-group">
+                            <li><img src="/uploads/<%= blogs[i].image %>" alt=""></li>
+                            <h2><%= blogs[i].title %></h2>
+                            <div class="buttoncenter">
+                                <a href="/blogs/<%= blogs[i]._id %>"><button>See More</button></a>
+                            </div>
+                        </div>
+                    </ul>
+
+            <% } %>
+        <% } else { %>
+            <p class="empty">There are no blogs to display...</p>
+        <% } %>
+        </div>
+    </div>
+
+    <div class="content2">
+        <div class="all-blogs-title">
+            <h1>All Blogs</h1>
+        </div>
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+
+                <ul class="catlist">
+                    <div class="content-group">
+                        <li><img src="/uploads/<%= blog.image %>" alt=""></li>
+                    <div class="blogdesc">
+                        <h2 class="title"><%= blog.title %></h2>
+                        <p class="time">Time Created: <%= blog.createdAt.toLocaleString('en-PH', {
+                            dateStyle: 'long',
+                            timeStyle: 'short'
+                        }) %></p>
+                        <p class="snippet"><%= blog.snippet %></p>
+                        <button><a href="/blogs/<%= blog._id %>">See More</a></button>
+                    </div>
+            </ul>
+
+            <% }) %>  
+        <% } else { %>
+        <p class="empty2">There are no blogs to display...</p>
+        <% } %>
+    </div>
+
+    <!-- Footer Partial -->
+    <%- include('../partials/footer.ejs') %>
+
+    <!-- <script src="/scripts/index.js"></script> -->
+</body>
+</html>

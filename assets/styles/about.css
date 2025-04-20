@@ -1,0 +1,19 @@
+.about-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    height: 700px;
+}
+
+.about-content h1{
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.about-content p{
+    margin-top: 32px;
+}

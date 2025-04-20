@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head Partial -->
+    <%- include('../partials/head.ejs') %>
+    
+<body>
+
+    <!-- Navigation Partial -->
+    <%- include('../partials/nav.ejs') %>
+
+    <div class="create-blog-content">
+        <h1>Create A New Blog!</h1>
+        <form action="/blogs" method="POST" enctype="multipart/form-data"> 
+            <div class="fillup">
+                <label for="title">Blog title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="fillup">
+                <label for="snippet">Blog snippet:</label>
+                <input type="text" id="snippet" name="snippet" required>
+            </div>
+            <div class="fillup">
+                <label for="body">Blog body:</label>
+                <textarea id="body" name="body" required></textarea>
+            </div>
+            <div class="fillup">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" required>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    
+    <!-- Footer Partial -->
+    <%- include('../partials/footer.ejs') %>
+
+</body>
+</html>
